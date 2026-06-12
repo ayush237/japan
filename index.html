@@ -2,244 +2,322 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日本 · Japan 2026 — Nov 14–29</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JAPAN · 14–29 NOV 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
 <style>
-  :root{--indigo:#1f2a5a;--ink:#22264b;--red:#c73e3a;--paper:#fbf9f4;--line:#e3e0d6;--soft:#6b7090;}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Georgia,'Noto Serif',serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:15px}
-  .wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
-  header{background:var(--indigo);color:#fff;padding:42px 16px 34px;text-align:center}
-  header .jp{font-size:30px;letter-spacing:.4em;opacity:.85}
-  header h1{font-size:26px;font-weight:normal;letter-spacing:.12em;margin:8px 0 4px}
-  header p{color:#c9cfe6;font-size:13px;letter-spacing:.08em}
-  .stamp{display:inline-block;border:2px solid var(--red);color:var(--red);background:#fff;
-    padding:3px 12px;border-radius:3px;font-size:12px;letter-spacing:.15em;margin-top:14px}
-  h2{font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--red);
-    margin:44px 0 14px;display:flex;align-items:center;gap:10px}
-  h2::after{content:"";flex:1;height:1px;background:var(--line)}
-  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px}
-  .day .dh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px}
-  .day .dh b{font-size:16px;color:var(--indigo)}
-  .day .dh span{font-size:12px;color:var(--soft);letter-spacing:.06em}
-  .slot{display:flex;gap:10px;margin:7px 0}
-  .slot em{flex:0 0 60px;font-style:normal;font-size:11px;letter-spacing:.1em;color:var(--red);text-transform:uppercase;padding-top:2px}
-  .slot div{flex:1}
-  .tag{display:inline-block;font-size:10.5px;letter-spacing:.05em;border:1px solid var(--indigo);
-    color:var(--indigo);border-radius:3px;padding:0 6px;margin-left:4px;vertical-align:1px}
-  .tag.r{border-color:var(--red);color:var(--red)}
-  .veg{color:#2e7d4f;font-size:13px;margin-top:8px}
-  .note{font-size:13px;color:var(--soft);margin-top:8px;border-left:3px solid var(--line);padding-left:10px}
-  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:14px}
-  th{background:var(--indigo);color:#fff;text-align:left;padding:9px 12px;font-weight:normal;letter-spacing:.08em;font-size:12px}
-  td{padding:9px 12px;border-top:1px solid var(--line)}
-  tr.total td{background:#f3f1ea;font-weight:bold;color:var(--indigo)}
-  ul{padding-left:20px}li{margin:5px 0}
-  .moment{background:#fff;border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:14px}
-  .verify{color:var(--red);font-size:12px}
-  footer{text-align:center;color:var(--soft);font-size:12px;margin-top:48px;letter-spacing:.1em}
-  @media print{header{padding:24px}}
+:root{--indigo:#141a3d;--indigo2:#1f2a6e;--red:#e63946;--paper:#f7f7fb;--ink:#1b1f3a;--soft:#6e7391;--line:#e6e7f0;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--paper);color:var(--ink);font-size:15px;line-height:1.5}
+#bar{position:fixed;top:0;left:0;height:3px;background:var(--red);width:0;z-index:99;transition:width .1s}
+nav{position:sticky;top:0;z-index:90;background:rgba(20,26,61,.92);backdrop-filter:blur(10px);display:flex;gap:4px;overflow-x:auto;padding:10px 12px}
+nav a{color:#cfd4f2;text-decoration:none;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:99px;white-space:nowrap;transition:.25s}
+nav a:hover,nav a.on{background:var(--red);color:#fff}
+.hero{min-height:62vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:70px 20px;position:relative;overflow:hidden;
+background:linear-gradient(130deg,#0d1230,#1f2a6e 45%,#3a1d50 80%,#0d1230);background-size:300% 300%;animation:flow 14s ease infinite}
+@keyframes flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero .jp{font-family:'Noto Serif JP';font-size:15px;letter-spacing:.7em;color:#ff8e96;animation:up .9s .1s both}
+.hero h1{font-size:clamp(38px,9vw,72px);font-weight:800;letter-spacing:-.02em;margin:10px 0;animation:up .9s .25s both}
+.hero p{color:#aab1e0;font-weight:600;letter-spacing:.15em;font-size:13px;animation:up .9s .4s both}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:26px;animation:up .9s .55s both}
+.chips span{border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:7px 16px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.06)}
+.chips b{color:#ff8e96}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.route{display:flex;overflow-x:auto;padding:18px 16px;background:var(--indigo);align-items:center}
+.route div{color:#fff;font-weight:700;font-size:13px;white-space:nowrap;padding:6px 12px;background:var(--indigo2);border-radius:8px}
+.route i{color:var(--red);font-style:normal;padding:0 8px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.wrap{max-width:780px;margin:0 auto;padding:8px 16px 80px}
+h2{font-size:13px;letter-spacing:.3em;color:var(--red);margin:54px 0 18px;display:flex;align-items:center;gap:12px;font-weight:800}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.day{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 14px rgba(20,26,61,.05);transition:.3s}
+.day:hover{box-shadow:0 10px 28px rgba(20,26,61,.1);transform:translateY(-2px)}
+.dh{display:flex;align-items:center;gap:14px;padding:15px 18px;background:linear-gradient(90deg,var(--indigo),var(--indigo2));color:#fff}
+.dn{font-size:26px;font-weight:800;color:#ff8e96;min-width:44px}
+.dh b{font-size:15px;display:block}.dh small{color:#aab1e0;font-weight:600;letter-spacing:.08em;font-size:11px}
+.dh .city{margin-left:auto;font-family:'Noto Serif JP';font-size:13px;color:#ff8e96;white-space:nowrap}
+.row{display:flex;gap:12px;padding:11px 18px;border-top:1px solid var(--line)}
+.t{flex:0 0 52px;font-weight:800;font-size:12.5px;color:var(--indigo2);padding-top:1px}
+.row>div:last-child{flex:1}
+.row .a{font-weight:600}
+.m{font-size:12.5px;color:var(--soft);margin-top:2px}
+.bk{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.06em;border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.opt{display:inline-block;border:1.5px solid var(--indigo2);color:var(--indigo2);font-size:10px;font-weight:800;border-radius:5px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.lg{padding:11px 18px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--soft);background:#fafafe}
+.lg b{color:var(--indigo2)}
+.veg{color:#1f7a4d}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:13.5px;box-shadow:0 2px 14px rgba(20,26,61,.05)}
+th{background:var(--indigo);color:#fff;text-align:left;padding:11px 13px;font-size:11.5px;letter-spacing:.08em}
+td{padding:10px 13px;border-top:1px solid var(--line)}
+tr.tt td{background:#141a3d;color:#fff;font-weight:800}
+tr.tt td b{color:#ff8e96}
+.tl{position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--red),var(--indigo2))}
+.tl .it{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 16px;margin-bottom:12px}
+.tl .it::before{content:"";position:absolute;left:-23px;top:18px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px #f7d2d5}
+.tl b.mo{color:var(--red);font-size:11.5px;letter-spacing:.15em}
+.tl p{font-size:13.5px;margin-top:3px}
+.cl label{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:8px;cursor:pointer;font-size:13.5px;transition:.2s}
+.cl label:active{transform:scale(.985)}
+.cl input{width:18px;height:18px;accent-color:var(--red);margin-top:1px;flex:none}
+.cl input:checked+span{text-decoration:line-through;color:var(--soft)}
+.hint{font-size:12.5px;color:var(--soft);margin:10px 2px}
+.warn{background:#fff6f6;border:1px solid #f3c2c6;border-radius:12px;padding:12px 16px;font-size:13px;margin-bottom:16px}
+.moment{background:linear-gradient(135deg,#fff,#fff6f6);border:1.5px dashed var(--red);border-radius:16px;padding:16px 18px;font-size:13.5px}
+footer{text-align:center;color:var(--soft);font-size:12px;padding:30px;letter-spacing:.12em}
 </style>
 </head>
 <body>
-<header>
+<div id="bar"></div>
+<nav id="nav">
+  <a href="#days">Itinerary</a><a href="#stay">Hotels</a><a href="#budget">Budget</a>
+  <a href="#book">Bookings</a><a href="#links">Links</a><a href="#visa">Visa</a><a href="#pack">Packing</a><a href="#tips">Tips</a>
+</nav>
+
+<div class="hero">
   <div class="jp">日本旅行</div>
-  <h1>JAPAN · FIRST LIGHT IN AUTUMN</h1>
-  <p>Delhi → Tokyo → Fuji → Izu → Nagoya → Hida → Kyoto → Osaka → Delhi</p>
-  <div class="stamp">SAT 14 NOV — SUN 29 NOV 2026</div>
-</header>
+  <h1>JAPAN</h1>
+  <p>SAT 14 NOV → SUN 29 NOV 2026 · PEAK AUTUMN · YOLO EDITION</p>
+  <div class="chips">
+    <span><b>16</b> days door-to-door</span><span><b>10</b> leave days, 0 wasted</span>
+    <span><b>6</b> bases</span><span><b>≈₹2.3L</b> per person</span><span><b>0</b> JR Pass needed</span>
+  </div>
+</div>
+<div class="route">
+  <div>DEL</div><i>→</i><div>Tokyo ×5</div><i>→</i><div>Fuji ×1</div><i>→</i><div>Izu ×1</div><i>→</i>
+  <div>Nagoya ×2</div><i>→</i><div>Hida</div><i>→</i><div>Kyoto ×3</div><i>→</i><div>Osaka ×2</div><i>→</i><div>DEL</div>
+</div>
+
 <div class="wrap">
+<h2 id="days">Day by day</h2>
+<div class="warn">⚠ <b>All clock times are typical patterns, not live timetables.</b> Nov 2026 schedules aren't out yet — recheck every fixed-time leg on Google Maps the night before. Prices in ¥/₹ are estimates pending your Gemini verification run.</div>
 
-<h2>Why this window</h2>
-<div class="card">
-  <b>November wins.</b> Peak Kyoto/Arashiyama foliage (~Nov 20–30), crystal-clear Mt Fuji visibility (Nov is statistically one of the best months), capybara onsen at its coziest, and winter illuminations switched on. 7–15°C is layer weather, not misery weather — every outdoor wishlist item survives. Flights priced ≈ same as October. 16 days door-to-door, flights on weekends, <b>exactly 10 leave days used</b> (Nov 16–20, 23–27).
-  <p class="note">DIY beats the operator: this plan totals ~₹4.4–4.9L for two vs the ₹5.8L quote — with a ryokan splurge, glamping and Ghibli Park included. Everything bookable with free cancellation is flagged.</p>
+<div class="day rv"><div class="dh"><span class="dn">00</span><div><b>Sat 14 Nov — Fly out</b><small>DELHI → TOKYO</small></div><span class="city">出発</span></div>
+  <div class="row"><span class="t">~20:00</span><div><span class="a">DEL → HND/NRT overnight (~7h45 direct)</span><div class="m">Aim Haneda — 30 min from city vs Narita's 80. Eat, sleep, hydrate.</div></div></div>
 </div>
 
-<h2>Day by day</h2>
-
-<div class="card day"><div class="dh"><b>Day 0 · Sat 14 Nov</b><span>DELHI → TOKYO</span></div>
-  <div class="slot"><em>Night</em><div>Overnight flight DEL → Haneda/Narita (~8h direct). Sleep on the plane.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">01</span><div><b>Sun 15 Nov — Land softly</b><small>TOKYO · base: Dormy Inn</small></div><span class="city">東京</span></div>
+  <div class="row"><span class="t">07:30</span><div><span class="a">Land · immigration · Welcome Suica</span><div class="m">🚆 Haneda → city: Keikyu/Monorail ~30 min, ¥500. Pre-fill Visit Japan Web QR before flying.</div></div></div>
+  <div class="row"><span class="t">10:00</span><div><span class="a">Drop bags at Dormy Inn (check-in 15:00, bag-drop fine)</span></div></div>
+  <div class="row"><span class="t">12:00</span><div><span class="a">Asakusa: Sensō-ji, Nakamise lane, Sumida river</span><div class="m">Flat, easy, jetlag-proof. <span class="veg">Veg lunch: Sometaro okonomiyaki or CoCo Ichiban veg curry.</span></div></div></div>
+  <div class="row"><span class="t">17:30</span><div><span class="a">Check-in → Dormy onsen soak → free 21:30 night-ramen (ask veg)</span><div class="m">Sleep by 22:00. Tomorrow is dense.</div></div></div>
+  <div class="lg"><b>Logistics:</b> charge Suica with ¥3,000. No day passes needed today.</div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 1 · Sun 15 Nov</b><span>TOKYO — ARRIVAL</span></div>
-  <div class="slot"><em>Morning</em><div>Land, grab Suica/Welcome Suica, train to hotel (Dormy Inn). Drop bags.</div></div>
-  <div class="slot"><em>Afternoon</em><div>Easy jetlag day: Asakusa, Sensō-ji, Nakamise street, Sumida riverside.</div></div>
-  <div class="slot"><em>Evening</em><div>Tokyo Skytree from Asakusa rooftops; early night.</div></div>
-  <div class="veg">Veg: Asakusa — Sometaro okonomiyaki (veg option), CoCo Ichibanya veg curry, conbini onigiri (check fillings).</div>
+<div class="day rv"><div class="dh"><span class="dn">02</span><div><b>Mon 16 Nov — Sumo + teamLab</b><small>TOKYO</small></div><span class="city">相撲</span></div>
+  <div class="row"><span class="t">07:30</span><div><span class="a">Sumo morning practice (asageiko), Ryogoku stable<span class="bk">BOOKED TOUR ~¥12k</span></span><div class="m">1.5–2h, silent viewing. Nov tournament is in Fukuoka — this is the Tokyo move, and more intimate.</div></div></div>
+  <div class="row"><span class="t">11:00</span><div><span class="a">Ryogoku Kokugikan sumo museum (free) → lunch</span><div class="m veg">T's TanTan, Tokyo Stn (fully vegan ramen, Keiyo St. gate) — en route to Toyosu.</div></div></div>
+  <div class="row"><span class="t">14:00</span><div><span class="a">teamLab Planets, Toyosu<span class="bk">TIMED ¥3,800–4,200</span></span><div class="m">Barefoot, water to knees — wear rollable pants. 2.5–3h. Nothing like the Singapore one.</div></div></div>
+  <div class="row"><span class="t">18:00</span><div><span class="a">Ginza stroll or back early — protect your legs</span></div></div>
+  <div class="lg"><b>Transit day-cost:</b> ~¥1,200 pp on Suica. No pass.</div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 2 · Mon 16 Nov</b><span>TOKYO — SUMO + TEAMLAB</span></div>
-  <div class="slot"><em>Morning</em><div><b>Sumo morning practice (asageiko) viewing</b>, Ryogoku stable tour <span class="tag r">BOOK AHEAD</span>. (Nov Grand Tournament is in Fukuoka — practice viewing is the Tokyo option, and more intimate.)</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>TeamLab Planets, Toyosu</b> — the barefoot water one, totally different from Singapore <span class="tag r">TIMED TICKET</span>.</div></div>
-  <div class="slot"><em>Evening</em><div>Ginza stroll or Toyosu waterfront; rest legs.</div></div>
-  <div class="veg">Veg: T's TanTan (Tokyo Station, fully vegan ramen) — a pilgrimage-worthy bowl.</div>
+<div class="day rv"><div class="dh"><span class="dn">03</span><div><b>Tue 17 Nov — West Tokyo classics</b><small>TOKYO</small></div><span class="city">渋谷</span></div>
+  <div class="row"><span class="t">08:30</span><div><span class="a">Meiji Jingū forest shrine (quiet before 10)</span></div></div>
+  <div class="row"><span class="t">10:30</span><div><span class="a">Harajuku Takeshita St → Omotesando</span><div class="m veg">Veg: Brown Rice Canteen, Omotesando.</div></div></div>
+  <div class="row"><span class="t">13:30</span><div><span class="a">Gotokuji lucky-cat temple</span><div class="m">🚆 Odakyu line from Shinjuku → Gotokuji, ~20 min. 1h is plenty.</div></div></div>
+  <div class="row"><span class="t">15:45</span><div><span class="a">Suga Shrine "Your Name" stairs, Yotsuya</span><div class="m">10-min photo stop on the way back via Shinjuku.</div></div></div>
+  <div class="row"><span class="t">16:30</span><div><span class="a">Shibuya Sky sunset slot<span class="bk">TIMED ¥2,500</span></span><div class="m">Sunset ~16:32 late Nov — book the 15:40–16:00 entry. Fuji visible on clear days.</div></div></div>
+  <div class="row"><span class="t">19:00</span><div><span class="a">Shibuya Crossing at night → Center-gai → Mega Don Quijote browse</span></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 3 · Tue 17 Nov</b><span>TOKYO — WEST SIDE</span></div>
-  <div class="slot"><em>Morning</em><div>Meiji Jingū forest shrine → Harajuku Takeshita St → Omotesando.</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>Gotokuji lucky-cat temple</b> (Setagaya) → <b>Suga Shrine "Your Name" stairs</b> (Yotsuya) on the way back.</div></div>
-  <div class="slot"><em>Evening</em><div><b>Shibuya Sky at sunset</b> (~16:30 slot, Fuji silhouette on clear days) <span class="tag r">TIMED TICKET</span> → Shibuya Crossing at night.</div></div>
-  <div class="slot"><em>Flex</em><div><b>Go-kart window:</b> if IDP arrived + feeling impulsive, book a night street-kart run (Shibuya/Harajuku) for tonight or Day 6 <span class="tag">IDP REQUIRED</span>.</div></div>
-  <div class="veg">Veg: Harajuku — Brown Rice by Neal's Yard; Shibuya — Nagi Shokudo (vegan).</div>
+<div class="day rv"><div class="dh"><span class="dn">04</span><div><b>Wed 18 Nov — DisneySea</b><small>TOKYO · full day</small></div><span class="city">海</span></div>
+  <div class="row"><span class="t">07:45</span><div><span class="a">Arrive gates before 08:30 open<span class="bk">DATED ¥8,900–10,900</span></span><div class="m">🚆 ~40 min to Maihama + Disney monorail. Weekday = sane crowds.</div></div></div>
+  <div class="row"><span class="t">08:30</span><div><span class="a">Rope-drop Fantasy Springs → buy Premier Access in-app for Soaring + Journey immediately</span></div></div>
+  <div class="row"><span class="t">19:30</span><div><span class="a">Harbor night show (your fireworks #1) → back ~21:30</span><div class="m veg">Veg inside is thin: Casbah Food Court veg curry; carry conbini backup.</div></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 4 · Wed 18 Nov</b><span>TOKYO — DISNEYSEA</span></div>
-  <div class="slot"><em>All day</em><div><b>Tokyo DisneySea</b> — rope-drop to fireworks. Buy Premier Access in-app for Soaring / Journey / Fantasy Springs <span class="tag r">DATED TICKET</span>.</div></div>
-  <div class="veg">Veg: limited inside — veg curry at Casbah Food Court; carry conbini backup snacks.</div>
+<div class="day rv"><div class="dh"><span class="dn">05</span><div><b>Thu 19 Nov — Mt Fuji + glamping</b><small>KAWAGUCHIKO · overnight</small></div><span class="city">富士</span></div>
+  <div class="row"><span class="t">08:00</span><div><span class="a">Highway bus Shinjuku BT → Kawaguchiko<span class="bk">RESERVE ¥2,200</span></span><div class="m">~1h45. Backpacks only — big bags stay at Dormy Inn (free hold, back Day 6).</div></div></div>
+  <div class="row"><span class="t">11:00</span><div><span class="a">Mt Fuji Panoramic Ropeway (¥1,000) → Oishi Park lakeside Fuji shots</span><div class="m">Nov = best Fuji visibility of the year, snow-capped.</div></div></div>
+  <div class="row"><span class="t">14:30</span><div><span class="a">Chureito Pagoda (Shimoyoshida, 2 stops on Fujikyu line)</span><div class="m">398 steps. The Japan poster photo, with late maples.</div></div></div>
+  <div class="row"><span class="t">16:30</span><div><span class="a">Check in glamping dome — PICA Fujiyama / Dot Glamping<span class="bk">VEG BBQ SET</span></span><div class="m">Heated dome, deck dinner, stars over Fuji. ~¥9–13k pp.</div></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 5 · Thu 19 Nov</b><span>MT FUJI — KAWAGUCHIKO</span></div>
-  <div class="slot"><em>Morning</em><div>Highway bus Shinjuku → Kawaguchiko (~2h). Leave big bags at Tokyo hotel / forward via Yamato.</div></div>
-  <div class="slot"><em>Afternoon</em><div>Mt Fuji Panoramic Ropeway, Oishi Park lakeside Fuji views, Chureito Pagoda if time.</div></div>
-  <div class="slot"><em>Evening</em><div><b>Glamping night under Fuji</b> (PICA Fujiyama / Dot Glamping style — heated dome tents, BBQ deck, stars). Camping wish: done, in comfort. <span class="tag">FREE-CANCEL RATE</span></div></div>
-  <div class="veg">Veg: request veg BBQ set when booking glamping; Kawaguchiko has houtou noodle shops with veg-adaptable pots (confirm dashi).</div>
+<div class="day rv"><div class="dh"><span class="dn">06</span><div><b>Fri 20 Nov — Fuji sunrise → Tokyo</b><small>TOKYO</small></div><span class="city">朝</span></div>
+  <div class="row"><span class="t">06:20</span><div><span class="a">Sunrise Fuji from camp (it glows pink — be outside)</span></div></div>
+  <div class="row"><span class="t">09:30</span><div><span class="a">Momiji Corridor maple tunnel, north shore (free, peak now)</span></div></div>
+  <div class="row"><span class="t">12:00</span><div><span class="a">Bus back → Shinjuku ~14:00</span></div></div>
+  <div class="row"><span class="t">15:00</span><div><span class="a">Flex slot: Shinjuku Gyoen foliage / shopping / anything missed</span><div class="m">Keep this empty in advance. Empty = relaxing.</div></div></div>
+  <div class="row"><span class="t">19:00</span><div><span class="a">Omoide Yokochō lantern alleys + Kabukichō neon walk (farewell Tokyo)</span></div></div>
+  <div class="lg"><b>Tonight:</b> repack. Tomorrow you leave Tokyo for good — everything comes with you.</div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 6 · Fri 20 Nov</b><span>FUJI → TOKYO</span></div>
-  <div class="slot"><em>Morning</em><div>Sunrise Fuji from camp. Lake loop or Momiji (maple) Corridor — late-Nov colour here.</div></div>
-  <div class="slot"><em>Afternoon</em><div>Bus back to Shinjuku; free Tokyo slot — Shinjuku Gyoen foliage / shopping / anything missed.</div></div>
-  <div class="slot"><em>Evening</em><div>Backup go-kart window, or Omoide Yokocho lantern alleys (atmosphere, veg-snack friendly izakaya picks).</div></div>
+<div class="day rv"><div class="dh"><span class="dn">07</span><div><b>Sat 21 Nov — Saphir + ryokan ✦</b><small>IZU · splurge night</small></div><span class="city">伊豆</span></div>
+  <div class="row"><span class="t">11:00</span><div><span class="a">Saphir Odoriko, Tokyo Stn → Izu-Kōgen<span class="bk">EKI-NET, 1 MO OUT, ¥6,500–8,500</span></span><div class="m">~2h of all-glass green-car coastline. Sit right side for the sea.</div></div></div>
+  <div class="row"><span class="t">13:30</span><div><span class="a">Bags in station locker → bus to Jogasaki Coast cliff walk</span><div class="m">Lava cliffs + Kadowaki suspension bridge + lighthouse loop, ~90 min.</div></div></div>
+  <div class="row"><span class="t">15:45</span><div><span class="a">Mt Omuro chairlift (¥1,000) — crater-rim walk at golden hour ✦</span><div class="m">360°: ocean, islands, Fuji. Last lift ~16:15 in Nov — keep time.</div></div></div>
+  <div class="row"><span class="t">17:30</span><div><span class="a">Ryokan check-in: open-air onsen → veg kaiseki dinner ✦<span class="bk">VEG REQ. AT BOOKING</span></span><div class="m">The splurge night. Yukata on, phone down. ~¥30–38k for two.</div></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 7 · Sat 21 Nov</b><span>IZU — SPLURGE DAY ✦</span></div>
-  <div class="slot"><em>Morning</em><div><b>Saphir Odoriko</b> scenic premium express, Tokyo → Izu-Kōgen — all-window green cars hugging the coast <span class="tag r">RESERVE ~1 MONTH OUT</span>.</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>Jogasaki Coast cliff walk</b> — lava cliffs + Kadowaki suspension bridge → <b>Mt Omuro chairlift</b> up the grassy volcano cone, walk the crater rim.</div></div>
-  <div class="slot"><em>Evening</em><div><b>Ryokan splurge night:</b> private/open-air onsen + multi-course <b>shojin/vegetarian kaiseki</b> (request at booking, 1 week notice min). The night of the trip.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">08</span><div><b>Sun 22 Nov — Capybaras, beach & maybe fireworks</b><small>IZU → NAGOYA</small></div><span class="city">温泉</span></div>
+  <div class="row"><span class="t">08:00</span><div><span class="a">Ryokan breakfast + final soak</span></div></div>
+  <div class="row"><span class="t">10:00</span><div><span class="a">Izu Shaboten Zoo — capybara open-air onsen (¥2,700)</span><div class="m">Yuzu-bath season starts late Nov — verify dates on izushaboten.com.</div></div></div>
+  <div class="row"><span class="t">13:30</span><div><span class="a">🚆 Izu-Kōgen → Atami local (~45 min, ¥750)</span></div></div>
+  <div class="row"><span class="t">15:00</span><div><span class="a">Atami Sun Beach 🏖 — IF Atami Sea Fireworks falls on 21/22 Nov, stay for the 20-min show over the bay<span class="bk">CHECK 2026 DATES</span></span><div class="m">Then 🚄 Kodama Atami → Nagoya (~2h, ¥7,400, Smart-EX). Fireworks night = take the ~21:00 train, arrive Nagoya 23:00 — fine, Day 9 starts at 9.</div></div></div>
+  <div class="row"><span class="t">~18:00</span><div><span class="a">Check in near Nagoya Stn → easy dinner</span><div class="m veg">Veg: Loving Hut Nagoya or station veg curry.</div></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 8 · Sun 22 Nov</b><span>IZU → NAGOYA</span></div>
-  <div class="slot"><em>Morning</em><div>Ryokan breakfast + last onsen soak. <b>Capybara open-air onsen</b> at Izu Shaboten Zoo (they soak in yuzu baths from late Nov — peak adorable). <span class="verify">verify start date</span></div></div>
-  <div class="slot"><em>Afternoon</em><div>Beach wish: quick stop at <b>Shirahama Ohama beach</b> (white sand, no swimming — photos + feet in sand) <i>or</i> stay for <b>Izu Granpal Park night illumination</b> from ~dusk.</div></div>
-  <div class="slot"><em>Evening</em><div>Train to Atami → Shinkansen Atami → Nagoya (~1.5h). Sleep Nagoya.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">09</span><div><b>Mon 23 Nov — Ghibli Park</b><small>NAGOYA · holiday in Japan!</small></div><span class="city">ジブリ</span></div>
+  <div class="row"><span class="t">09:00</span><div><span class="a">🚆 Higashiyama line → Linimo → Ai·Chikyūhaku Park (~50 min)</span></div></div>
+  <div class="row"><span class="t">10:00</span><div><span class="a">Ghibli Park: Grand Warehouse → Valley of Witches → Mononoke Village<span class="bk">DATED, SELLS OUT — RELEASE ~2 MO PRIOR</span></span><div class="m">⚠ Nov 23 is a Japanese public holiday. Buy the second sales open, or swap with Day 10. ¥3,500–7,300 pp by ticket type.</div></div></div>
+  <div class="row"><span class="t">18:30</span><div><span class="a">Osu shopping arcade + dinner, early night</span></div></div>
+  <div class="lg"><b>Tonight:</b> hand big bags to hotel desk for Yamato forwarding → Kyoto hotel (~¥2,000/bag). Tomorrow is daypacks only.</div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 9 · Mon 23 Nov</b><span>NAGOYA — GHIBLI PARK</span></div>
-  <div class="slot"><em>All day</em><div><b>Ghibli Park</b> (Nagakute) — Grand Warehouse, Mononoke Village, Valley of Witches <span class="tag r">DATED TICKET, SELLS OUT</span>. Note: Nov 23 is a Japanese public holiday — book the instant tickets release, or swap with Day 10. <span class="verify">verify release date</span></div></div>
-  <div class="slot"><em>Evening</em><div>Nagoya Station ramen alley (veg options at T's-style chains) / Osu shopping street.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">10</span><div><b>Tue 24 Nov — Takayama + Shirakawa-gō</b><small>KLOOK DAY TOUR → KYOTO</small></div><span class="city">白川郷</span></div>
+  <div class="row"><span class="t">07:50</span><div><span class="a">Klook day tour: Nagoya → Takayama old town → Shirakawa-gō → Nagoya<span class="bk">KLOOK ~¥9–13k pp</span></span><div class="m">One bus, zero transfers. UNESCO gasshō village + Sanmachi lanes both covered — pick a tour with Shiroyama viewpoint time. Possible first snow.</div></div></div>
+  <div class="row"><span class="t">18:30</span><div><span class="a">Tour drops at Nagoya Stn → 🚄 Shinkansen → Kyoto (36 min, ¥5,910)</span><div class="m">In Kyoto by ~20:00. Bags already waiting at the hotel.</div></div></div>
+  <div class="lg"><b>Recheck pickup time on your Klook voucher + train times on Google Maps the night before.</b></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 10 · Tue 24 Nov</b><span>HIDA — UNESCO DAY</span></div>
-  <div class="slot"><em>Morning</em><div>Early train Nagoya → <b>Takayama</b> (2.5h, gorgeous river valley line). Old town sanmachi streets, sake-barrel lanes.</div></div>
-  <div class="slot"><em>Afternoon</em><div>Bus 50 min → <b>Shirakawa-gō</b> — UNESCO thatched gassho-zukuri village; Shiroyama viewpoint. Possible first dusting of snow.</div></div>
-  <div class="slot"><em>Evening</em><div>Bus → Kanazawa (1¼h) → Shinkansen/express to <b>Kyoto</b> (~2¼h). Long day, worth it. Sleep Kyoto. <span class="tag">RESERVE BUSES AHEAD</span></div></div>
+<div class="day rv"><div class="dh"><span class="dn">11</span><div><b>Wed 25 Nov — Kyoto in kimono</b><small>KYOTO · peak foliage</small></div><span class="city">京都</span></div>
+  <div class="row"><span class="t">06:30</span><div><span class="a">Fushimi Inari at dawn — full summit loop (~2h)</span><div class="m">The only way to have the gates near-empty. 🚆 JR Nara line, 5 min from Kyoto Stn.</div></div></div>
+  <div class="row"><span class="t">10:30</span><div><span class="a">Kimono rental, Higashiyama (¥4–6k pp, return by 17:30)<span class="bk">RESERVE</span></span></div></div>
+  <div class="row"><span class="t">11:30</span><div><span class="a">Kiyomizu-dera (UNESCO) → Sannenzaka/Ninenzaka lanes in colour</span><div class="m veg">Veg: yudofu set on the temple lanes, or Ain Soph Journey.</div></div></div>
+  <div class="row"><span class="t">18:00</span><div><span class="a">Gion evening walking tour → Eikan-dō night maple illumination<span class="bk">~¥1,000</span></span></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 11 · Wed 25 Nov</b><span>KYOTO — CLASSIC</span></div>
-  <div class="slot"><em>Morning</em><div><b>Fushimi Inari at dawn</b> (be there 6:30, summit loop before crowds).</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>Kimono/yukata rental</b> in Higashiyama → Kiyomizu-dera (UNESCO), Sannenzaka lanes in peak maple colour.</div></div>
-  <div class="slot"><em>Evening</em><div><b>Gion evening walking tour</b>; Eikan-dō or Kodai-ji night foliage illumination after.</div></div>
-  <div class="veg">Veg: Kyoto is shojin-ryori heartland — Shigetsu (Tenryū-ji), Ain Soph Journey, yudofu (tofu hotpot) on Nanzen-ji lane.</div>
+<div class="day rv"><div class="dh"><span class="dn">12</span><div><b>Thu 26 Nov — Arashiyama trifecta</b><small>KYOTO</small></div><span class="city">嵐山</span></div>
+  <div class="row"><span class="t">07:15</span><div><span class="a">Bamboo grove before the crowds (free, 30 min)</span></div></div>
+  <div class="row"><span class="t">09:01</span><div><span class="a">Sagano Romantic Train, Saga-Torokko → Kameoka<span class="bk">BOOK 1 MO OUT ¥880</span></span><div class="m">25 min open-window maple gorge — left side seats.</div></div></div>
+  <div class="row"><span class="t">10:30</span><div><span class="a">Hozugawa river boat back down (2h, ~¥4,500 pp, blankets aboard)<span class="bk">PRE-BOOK PEAK WEEK</span></span></div></div>
+  <div class="row"><span class="t">14:00</span><div><span class="a">Tenryū-ji (UNESCO) + Okōchi Sansō garden (matcha incl.)</span></div></div>
+  <div class="row"><span class="t">17:00</span><div><span class="a">Kinkaku-ji golden hour OR rest — decide on the day</span></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 12 · Thu 26 Nov</b><span>KYOTO — ARASHIYAMA</span></div>
-  <div class="slot"><em>Morning</em><div>Bamboo grove by 7:30 → <b>Sagano Romantic Train</b> through the maple gorge <span class="tag r">BOOK COMBO EARLY</span>.</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>Hozugawa river boat</b> back down the gorge (2h, blankets provided) → Tenryū-ji (UNESCO) + Okōchi Sansō garden.</div></div>
-  <div class="slot"><em>Evening</em><div>Monkey park sunset or Kinkaku-ji golden hour; Nishiki Market browse.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">13</span><div><b>Fri 27 Nov — Amanohashidate + Ine ✦</b><small>KYOTO → OSAKA</small></div><span class="city">伊根</span></div>
+  <div class="row"><span class="t">08:38</span><div><span class="a">🚆 Hashidate express, Kyoto → Amanohashidate (~2h, ¥4,500)<span class="bk">RESERVE</span></span></div></div>
+  <div class="row"><span class="t">11:00</span><div><span class="a">Cable car → Kasamatsu Park: the "bridge to heaven" sandbar, viewed upside-down</span></div></div>
+  <div class="row"><span class="t">13:00</span><div><span class="a">🚌 Bus → Ine (~55 min): funaya boathouses + 25-min bay cruise ✦</span><div class="m">Stillest, quietest stop of the trip. Seagulls, wooden houses on water.</div></div></div>
+  <div class="row"><span class="t">16:00</span><div><span class="a">Return → express to Kyoto → 🚆 30 min to Osaka, check in Namba</span></div></div>
+  <div class="row"><span class="t">21:00</span><div><span class="a">First Dotonbori neon — just walk it tonight</span></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 13 · Fri 27 Nov</b><span>AMANOHASHIDATE + INE ✦</span></div>
-  <div class="slot"><em>Morning</em><div>Limited express Kyoto → Amanohashidate (~2h). Cable car to Kasamatsu Park — view the pine sandbar upside-down "bridge to heaven".</div></div>
-  <div class="slot"><em>Afternoon</em><div>Bus/boat to <b>Ine</b> — funaya boat-houses over the water, sightseeing bay cruise, the quietest place on this trip.</div></div>
-  <div class="slot"><em>Evening</em><div>Return via Kyoto → <b>Osaka</b>. First taste of <b>Dotonbori</b> neon at night. Sleep Osaka.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">14</span><div><b>Sat 28 Nov — Nara by Aoniyoshi</b><small>OSAKA</small></div><span class="city">奈良</span></div>
+  <div class="row"><span class="t">09:45</span><div><span class="a">Aoniyoshi luxury express, Ōsaka-Namba → Kintetsu-Nara<span class="bk">KINTETSU, 1 MO OUT, ~¥2,000</span></span><div class="m">35 min in the purple lounge train — luxury rail itch, cheaply scratched.</div></div></div>
+  <div class="row"><span class="t">10:30</span><div><span class="a">Deer park (buy senbei, bow back) → Tōdai-ji Great Buddha (UNESCO)</span></div></div>
+  <div class="row"><span class="t">14:00</span><div><span class="a">Kasuga Taisha lantern paths → Nakatanidō mochi-pounding show</span><div class="m veg">Fresh yomogi mochi = veg and outrageous.</div></div></div>
+  <div class="row"><span class="t">17:00</span><div><span class="a">Back to Osaka: Shinsekai → Dotonbori dinner → Don Quijote souvenir sweep</span><div class="m veg">Veg: Paprika Shokudō (vegan), Matsuri Indian near Dotonbori.</div></div></div>
 </div>
 
-<div class="card day"><div class="dh"><b>Day 14 · Sat 28 Nov</b><span>NARA — VIA AONIYOSHI</span></div>
-  <div class="slot"><em>Morning</em><div><b>Aoniyoshi luxury limited express</b> Osaka-Namba → Nara (purple Kintetsu beauty, ~35 min) <span class="tag r">RESERVE 1 MONTH OUT</span>. Deer park + senbei feeding.</div></div>
-  <div class="slot"><em>Afternoon</em><div><b>Tōdai-ji</b> Great Buddha (UNESCO), Kasuga Taisha lantern paths, Nakatanidou mochi-pounding.</div></div>
-  <div class="slot"><em>Evening</em><div>Back to Osaka — Shinsekai + Dotonbori round two, souvenir sweep at Don Quijote.</div></div>
-  <div class="veg">Veg: Osaka — Paprika Shokudo (vegan), Matsuri (Indian-veg, Dotonbori area), veg takoyaki at select stalls (ask "yasai").</div>
-</div>
-
-<div class="card day"><div class="dh"><b>Day 15 · Sun 29 Nov</b><span>OSAKA → DELHI</span></div>
-  <div class="slot"><em>Morning</em><div><b>Kuromon Market</b> (morning is its best) — fruit, matcha sweets, last bites.</div></div>
-  <div class="slot"><em>Afternoon</em><div>Train to KIX → fly Osaka → Delhi. Land same night. Office Monday. Worth it.</div></div>
+<div class="day rv"><div class="dh"><span class="dn">15</span><div><b>Sun 29 Nov — Home</b><small>OSAKA → DELHI</small></div><span class="city">帰国</span></div>
+  <div class="row"><span class="t">09:00</span><div><span class="a">Kuromon Market — fruit, matcha sweets, last bites</span></div></div>
+  <div class="row"><span class="t">12:00</span><div><span class="a">🚆 Nankai Rapi:t Namba → KIX (38 min, ¥1,490)</span></div></div>
+  <div class="row"><span class="t">~15:00</span><div><span class="a">KIX → DEL. Land tonight. Office Monday. Zero regrets.</span></div></div>
 </div>
 
 <h2>Quiet moments ✦</h2>
-<div class="moment">
-  Three low-key, standout spots if a certain question wants asking:
-  <ul>
-    <li><b>Mt Omuro crater rim, late afternoon</b> (Day 7) — 360° sea-and-Fuji views, sparse crowds, golden light.</li>
-    <li><b>The ryokan evening, Izu</b> (Day 7) — private open-air onsen, kaiseki, yukata, nobody else in the world.</li>
-    <li><b>Ine Bay waterfront</b> (Day 13) — silent boat-houses on still water; the least touristed beautiful place on this route.</li>
-  </ul>
+<div class="moment rv">If a certain question wants asking, the three best low-crowd windows are built in:
+<b>Mt Omuro crater rim at golden hour (Day 7)</b> · <b>the ryokan evening, private onsen (Day 7)</b> · <b>Ine Bay waterfront (Day 13)</b>. No flags planted in the itinerary — only you know.</div>
+
+<h2 id="stay">Hotels</h2>
+<div class="rv"><table>
+<tr><th>Nights</th><th>Base</th><th>Pick</th><th>₹/night·room</th></tr>
+<tr><td>15–18, 20</td><td>Tokyo ×5</td><td><b>Dormy Inn</b> (onsen + night ramen; Book&amp;Bed is a one-night gimmick, not a 5-night home for 2)</td><td>8,000–9,500</td></tr>
+<tr><td>19</td><td>Fuji ×1</td><td>Glamping dome, Kawaguchiko</td><td>18,000–25,000</td></tr>
+<tr><td>21</td><td>Izu ×1 ✦</td><td>Onsen ryokan, veg kaiseki</td><td>35,000–45,000</td></tr>
+<tr><td>22–23</td><td>Nagoya ×2</td><td>Business hotel at Nagoya Stn</td><td>6,000–7,500</td></tr>
+<tr><td>24–26</td><td>Kyoto ×3</td><td>Kyoto Stn / Karasuma (book NOW — peak foliage)</td><td>9,000–12,000</td></tr>
+<tr><td>27–28</td><td>Osaka ×2</td><td>Namba business hotel</td><td>7,000–8,500</td></tr>
+</table><p class="hint">All on free-cancellation rates. Lock order: ryokan → glamping → Kyoto → rest.</p></div>
+
+<h2 id="budget">Budget · 2 people</h2>
+<div class="rv"><table>
+<tr><th>Item</th><th>₹ (2 pax)</th><th>Note</th></tr>
+<tr><td>Flights DEL→HND + KIX→DEL open-jaw</td><td>1,00,000–1,15,000</td><td>changeable fare class</td></tr>
+<tr><td>Hotels ×14 nights</td><td>1,50,000–1,70,000</td><td>incl. ryokan + glamping</td></tr>
+<tr><td>All trains &amp; buses (no JR Pass)</td><td>50,000–58,000</td><td>pass loses money on this route post-2023 hike</td></tr>
+<tr><td>Activities incl. Klook Hida tour</td><td>65,000–80,000</td><td>Disney, Ghibli, teamLab, Sky, sumo, boats, kimono, tour</td></tr>
+<tr><td>Food, veg ¥4,500 pp/day</td><td>70,000–80,000</td><td>conbini breakfasts keep it honest</td></tr>
+<tr><td>Visa ×2 (VFS)</td><td>4,000</td><td>verify current fee</td></tr>
+<tr><td>Insurance w/ trip-cancellation</td><td>5,000–8,000</td><td>buy week of flight booking</td></tr>
+<tr><td>eSIM, forwarding, buffer</td><td>10,000</td><td></td></tr>
+<tr class="tt"><td>TOTAL</td><td><b>₹4.5–5.0L (≈₹2.3–2.5L pp)</b></td><td>vs ₹5.8L operator quote</td></tr>
+</table></div>
+
+<h2 id="book">Booking timeline</h2>
+<div class="tl rv">
+<div class="it"><b class="mo">JUNE — NOW</b><p>Confirm leave (Nov 16–20, 23–27). Book flights (changeable fare). Buy cancellation-cover insurance the same week.</p></div>
+<div class="it"><b class="mo">JULY</b><p>All hotels, free-cancel: ryokan + glamping first, Kyoto next. Book sumo asageiko tour + Klook Hida day tour (free-cancel options).</p></div>
+<div class="it"><b class="mo">SEPT ~10</b><p><b>Ghibli Park</b> tickets the minute late-Nov sales open (Nov 23 = JP holiday, fastest sell-out). Gather visa docs.</p></div>
+<div class="it"><b class="mo">SEPT ~18 / OCT</b><p>DisneySea (2 mo out) + teamLab (2–3 mo out). Apply <b>Japan visa via VFS</b> early Oct (5–10 working days).</p></div>
+<div class="it"><b class="mo">OCT 21–28 (1-month marks)</b><p>Saphir Odoriko (Eki-net, 10:00 JST), Aoniyoshi (Kintetsu), Sagano train, Hashidate express, Shibuya Sky sunset slot, kimono rental.</p></div>
+<div class="it"><b class="mo">NOV W2</b><p>Reconfirm veg kaiseki (7-day notice), Atami fireworks date, capybara-onsen dates, eSIM installed, forex loaded, Visit Japan Web filled, pack.</p></div>
+</div>
+<p class="hint">⚠ Release windows are as last known — verify each on the official sites below.</p>
+
+<h2 id="links">Booking links</h2>
+<div class="cl rv" data-store="links">
+<label><input type="checkbox"><span>Klook (Hida tour / sumo): <b>klook.com</b> → "Shirakawa-go Takayama day tour from Nagoya"</span></label>
+<label><input type="checkbox"><span>DisneySea: <b>reserve.tokyodisneyresort.jp/en/</b></span></label>
+<label><input type="checkbox"><span>teamLab Planets: <b>teamlab.art/e/planets/</b></span></label>
+<label><input type="checkbox"><span>Shibuya Sky: <b>shibuya-scramble-square.com/sky/</b></span></label>
+<label><input type="checkbox"><span>Ghibli Park: <b>ghibli-park.jp/en/ticket/</b></span></label>
+<label><input type="checkbox"><span>Saphir Odoriko: book <b>eki-net.com/en/jreast-train-reservation/</b> · info <b>jreast.co.jp/multi/en/saphir/</b></span></label>
+<label><input type="checkbox"><span>Aoniyoshi: <b>kintetsu.co.jp/foreign/english/aoniyoshi/</b></span></label>
+<label><input type="checkbox"><span>Sagano train: <b>sagano-kanko.co.jp/en/</b> · Hozugawa boat: <b>hozugawakudari.jp/en</b></span></label>
+<label><input type="checkbox"><span>Shinkansen app: <b>smart-ex.jp/en/</b> · Shinjuku–Fuji bus: <b>highway-buses.jp</b></span></label>
+<label><input type="checkbox"><span>Mt Omuro lift: <b>omuroyama.com</b> · Capybara onsen: <b>izushaboten.com</b></span></label>
+<label><input type="checkbox"><span>Atami fireworks 2026 dates: <b>ataminews.gr.jp</b></span></label>
+<label><input type="checkbox"><span>Glamping: <b>pica-resort.jp/fujiyama/</b> · Dormy Inn: <b>dormy-hotels.com/en/</b></span></label>
+<label><input type="checkbox"><span>Japan visa (India): <b>visa.vfsglobal.com/ind/en/jpn/</b> · arrival QR: <b>vjw-lp.digital.go.jp/en/</b></span></label>
 </div>
 
-<h2>Where you sleep</h2>
-<table>
-  <tr><th>Nights</th><th>City</th><th>Pick</th><th>≈ ₹/night (room)</th></tr>
-  <tr><td>15,16,17,18,20 Nov</td><td>Tokyo (5N)</td><td><b>Dormy Inn</b> (own onsen, free late-night ramen — skip Book&amp;Bed, too tight for 2 for five nights)</td><td>₹8,000–9,500</td></tr>
-  <tr><td>19 Nov</td><td>Kawaguchiko (1N)</td><td>Glamping dome (PICA Fujiyama / Dot Glamping)</td><td>₹18,000–25,000</td></tr>
-  <tr><td>21 Nov</td><td>Izu (1N) ✦</td><td><b>Ryokan splurge</b> — onsen + veg kaiseki (e.g. Izu-Kōgen onsen ryokan class)</td><td>₹35,000–45,000</td></tr>
-  <tr><td>22, 23 Nov</td><td>Nagoya (2N)</td><td>Business hotel nr. Nagoya Stn (Toyoko Inn / Dormy)</td><td>₹6,000–7,500</td></tr>
-  <tr><td>24,25,26 Nov</td><td>Kyoto (3N)</td><td>Hotel nr. Kyoto Stn / Karasuma (peak foliage = book NOW, free-cancel)</td><td>₹9,000–12,000</td></tr>
-  <tr><td>27, 28 Nov</td><td>Osaka (2N)</td><td>Namba/Shinsaibashi business hotel</td><td>₹7,000–8,500</td></tr>
-</table>
-<p class="note">Book everything on free-cancellation rates (Booking.com/agoda "pay at property"). Ryokan + glamping have the fewest rooms — lock these first.</p>
-
-<h2>Budget — 2 people, INR</h2>
-<table>
-  <tr><th>Item</th><th>Estimate (2 pax)</th><th>Notes</th></tr>
-  <tr><td>Flights DEL→TYO / KIX→DEL (open-jaw)</td><td>₹1,00,000–1,15,000</td><td>~₹23–28k pp each way; book changeable fare</td></tr>
-  <tr><td>Hotels, 14 nights (incl. ryokan + glamping)</td><td>₹1,50,000–1,70,000</td><td>per table above</td></tr>
-  <tr><td>Trains/buses in Japan (NO JR Pass)</td><td>₹55,000–65,000</td><td>Pass doesn't pay off post-2023 hike on this route — point-to-point + Saphir + Aoniyoshi is cheaper <span class="verify">verify current fares</span></td></tr>
-  <tr><td>Activities (DisneySea, TeamLab, Ghibli, Sky, sumo, boats, kimono, chairlift…)</td><td>₹55,000–65,000</td><td>go-karts ~₹13k extra for 2 if added</td></tr>
-  <tr><td>Food (veg, ~¥4,500 pp/day)</td><td>₹70,000–80,000</td><td>conbini breakfasts keep this honest</td></tr>
-  <tr><td>Visa (2 × ~₹2,000 via VFS)</td><td>₹4,000</td><td><span class="verify">verify current fee</span></td></tr>
-  <tr><td>Insurance (with trip-cancellation cover)</td><td>₹5,000–8,000</td><td>buy within days of flight booking</td></tr>
-  <tr><td>IDP + misc/buffer</td><td>₹10,000</td><td>eSIM/Ubigi ~₹1,500 for 2</td></tr>
-  <tr class="total"><td>TOTAL</td><td>₹4.4 – 4.9 L (₹2.2–2.45L pp)</td><td>vs ₹5.8L operator quote</td></tr>
-</table>
-
-<h2>Booking deadlines</h2>
-<div class="card"><ul>
-  <li><b>Ghibli Park:</b> dated tickets, historically released ~2 months ahead on the 10th, sell out fast for holidays. <span class="verify">verify</span></li>
-  <li><b>DisneySea:</b> app sales open ~2 months ahead; buy date the moment it opens. <span class="verify">verify</span></li>
-  <li><b>TeamLab Planets:</b> ~2–3 months ahead; weekday afternoon slots last longest. <span class="verify">verify</span></li>
-  <li><b>Shibuya Sky:</b> ~4 weeks ahead; sunset slots vanish in minutes. <span class="verify">verify</span></li>
-  <li><b>Saphir Odoriko:</b> JR East reservations open <b>1 month before, 10:00 JST</b> (Eki-net). <span class="verify">verify</span></li>
-  <li><b>Aoniyoshi:</b> Kintetsu bookings open 1 month ahead. <span class="verify">verify</span></li>
-  <li><b>Sagano Train + Hozugawa boat:</b> train seats 1 month ahead (JR West/stations); boat usually walk-up but pre-book peak foliage weekdays. <span class="verify">verify</span></li>
-  <li><b>Sumo asageiko tour:</b> 1–2 months ahead (limited stables/slots).</li>
-  <li><b>Ryokan veg kaiseki:</b> request at booking; confirm again 7 days out.</li>
-</ul></div>
-
-<h2>Action plan · June → November</h2>
-<div class="card"><ul>
-  <li><b>June:</b> Confirm leave (Nov 16–20, 23–27). Book open-jaw flights (changeable fare). Buy insurance with cancellation cover same week. <b>Apply for IDP</b> (RTO/Parivahan — takes weeks; needed for go-karts, can't be issued in Japan).</li>
-  <li><b>July:</b> Book ALL hotels free-cancel — ryokan and glamping first, Kyoto next (peak foliage rooms go earliest).</li>
-  <li><b>August:</b> Book sumo practice tour. Sketch ticket-release calendar with exact dates.</li>
-  <li><b>September:</b> Ghibli Park tickets on release day (~Sep 10 for late-Nov). Gather visa docs.</li>
-  <li><b>Early–mid Oct:</b> <b>Apply Japan visa via VFS</b> (5–10 working days; both salaried = simple). DisneySea + TeamLab tickets on release.</li>
-  <li><b>Late Oct:</b> Saphir Odoriko + Aoniyoshi + Sagano train at the 1-month mark. Shibuya Sky sunset slot. Kimono rental reservation.</li>
-  <li><b>Early Nov:</b> Reconfirm ryokan veg kaiseki, Takayama/Shirakawa-gō bus seats, eSIM, forex card load, pack.</li>
-</ul></div>
-
-<h2>Visa checklist — Indian passport, salaried</h2>
-<div class="card"><ul>
-  <li>Passport (6+ months validity, 2 blank pages) + old passports</li>
-  <li>Visa application form + 1 photo (45×45mm, white bg) each</li>
-  <li>Cover letter (joint, mentioning trip dates + self-funded)</li>
-  <li>Employment: NOC/leave-sanction letter on letterhead (JP Morgan / Oracle), 3 months salary slips</li>
-  <li>Bank statements (6 months, healthy balance) + ITR/Form 16 (2 yrs)</li>
-  <li>Day-wise itinerary (print this page!), hotel bookings, return flight booking</li>
-  <li>Apply via VFS Global Japan; typically 5–10 working days <span class="verify">verify current fee/process</span></li>
-</ul></div>
-
-<h2>Packing — late November</h2>
-<div class="card"><ul>
-  <li>Layers: thermals (1–2 sets), fleece/sweater, <b>packable down jacket</b>, light rain shell</li>
-  <li>Very comfortable walking shoes (20k+ steps/day) + warm socks; slip-on friendly for temples/ryokan</li>
-  <li>Beanie, light gloves, scarf (Shirakawa-gō + dawn Fushimi will bite)</li>
-  <li>Daypack, power bank, Type-A plug (same as some Indian 2-pin, but carry adapter), eSIM installed before flying</li>
-  <li>Forex card (Wise/Niyo) + ~¥20–30k cash for small shrines/buses</li>
-  <li>One nicer outfit (ryokan dinner ✦), swim-modesty not needed — onsens are bare, tattoo rules vary</li>
-  <li>IDP + Indian licence originals (go-karts), passport copies, insurance printout</li>
-  <li>Foldable duffel for souvenirs; medicines with prescription (check Japan's banned-meds list)</li>
-</ul></div>
-
-<footer>いってらっしゃい — have a trip worth remembering ✦</footer>
+<h2 id="visa">Visa checklist · 2× Indian, salaried</h2>
+<div class="cl rv" data-store="visa">
+<label><input type="checkbox"><span>Passports 6+ months valid, 2 blank pages (+ old passports)</span></label>
+<label><input type="checkbox"><span>Application forms + 45×45mm white-bg photos</span></label>
+<label><input type="checkbox"><span>Joint cover letter — dates, route, self-funded</span></label>
+<label><input type="checkbox"><span>Employer letters / leave sanction (JP Morgan, Oracle) + 3 mo salary slips</span></label>
+<label><input type="checkbox"><span>6 mo bank statements + 2 yr ITR / Form 16</span></label>
+<label><input type="checkbox"><span>Day-wise itinerary (this page), hotel + return-flight bookings</span></label>
+<label><input type="checkbox"><span>Submit at VFS Japan, early Oct → ~5–10 working days</span></label>
 </div>
+
+<h2 id="pack">Packing · late November</h2>
+<div class="cl rv" data-store="pack">
+<label><input type="checkbox"><span>Thermals ×2, fleece, <b>packable down jacket</b>, rain shell</span></label>
+<label><input type="checkbox"><span>Broken-in walking shoes (20k steps/day) — slip-on friendly for temples/ryokan</span></label>
+<label><input type="checkbox"><span>Beanie, gloves, scarf (dawn Fushimi + Shirakawa-gō bite)</span></label>
+<label><input type="checkbox"><span>Daypack, power bank, plug adapter, eSIM pre-installed</span></label>
+<label><input type="checkbox"><span>Forex card + ¥25k cash (buses, shrines, small shops)</span></label>
+<label><input type="checkbox"><span>One nice outfit for the ryokan evening ✦</span></label>
+<label><input type="checkbox"><span>Insurance printout · passport copies · Klook vouchers offline</span></label>
+<label><input type="checkbox"><span>Rollable pants for teamLab water rooms · foldable duffel for souvenirs</span></label>
+<label><input type="checkbox"><span>Meds + prescriptions (check Japan banned-medicine list)</span></label>
+</div>
+<p class="hint">Checkboxes save on this phone automatically.</p>
+
+<h2 id="tips">Ground rules that save you</h2>
+<div class="cl rv" data-store="tips">
+<label><input type="checkbox"><span><b>Suica on phone wallet</b> = every train, bus, conbini. Top up as you go.</span></label>
+<label><input type="checkbox"><span><b>Yamato luggage forwarding</b> (~¥2,000/bag, hotel desk) Nagoya→Kyoto. Never haul suitcases through transfers.</span></label>
+<label><input type="checkbox"><span>Google Maps is gospel for trains — recheck every fixed-time leg the night before.</span></label>
+<label><input type="checkbox"><span>Veg phrase: “Niku, sakana, dashi nashi de onegaishimasu” (no meat, fish, or fish-stock). Dashi hides everywhere — ask.</span></label>
+<label><input type="checkbox"><span>Conbini (7-Eleven/Lawson) = breakfast, ATMs, sanity. Onigiri: check fillings.</span></label>
+<label><input type="checkbox"><span>Free-cancel everything; pay-at-property. Timed tickets are the only non-refundables — buy those last-responsibly.</span></label>
+<label><input type="checkbox"><span>Tired mid-trip? The pressure valves, in drop order: Day 13 Ine trip → Day 2 sumo → dawn Fushimi (go 7:30 instead). All cancellable. YOLO ≠ collapse.</span></label>
+</div>
+
+<footer>いってらっしゃい ✦ BUILT FOR TWO · NOV 2026 · ONCE IN A LIFETIME, DONE RIGHT</footer>
+</div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.cl').forEach(cl=>{const k='jp_'+cl.dataset.store;
+const saved=JSON.parse(localStorage.getItem(k)||'[]');
+cl.querySelectorAll('input').forEach((c,i)=>{c.checked=saved[i]||false;
+c.onchange=()=>localStorage.setItem(k,JSON.stringify([...cl.querySelectorAll('input')].map(x=>x.checked)));});});
+const secs=[...document.querySelectorAll('h2[id]')],links=[...document.querySelectorAll('nav a')];
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.hash==='#'+e.target.id));}}),{rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>io2.observe(s));
+</script>
 </body>
 </html>
